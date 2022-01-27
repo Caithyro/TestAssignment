@@ -7,4 +7,9 @@
 
 import Foundation
 
-let requestUrlString = "https://randomuser.me/api/?results=20?format=pretty"
+let requestUrlString = "https://randomuser.me/api/?format=pretty&results=20"
+let titleString = "Our customers"
+let yearsOldString = " year(s) old"
+let storyboardNameString = "Main"
+let cellName = String(describing: CustomTableViewCell.self)
+let detailsViewControllerName = String(describing: DetailsViewController.self)

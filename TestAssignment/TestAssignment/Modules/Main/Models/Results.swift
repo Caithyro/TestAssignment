@@ -12,7 +12,7 @@ struct Results: Codable {
 	let registered: Registered?
 	let phone: String?
 	let cell: String?
-    let id: Id?
+	let id: Id?
 	let picture: Picture?
 	let nat: String?
 

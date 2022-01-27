@@ -23,7 +23,6 @@ class NetworkManager {
             do {
                 
                 let emptyData = Data.init()
-                self.usersResponceArray.removeAll()
                 var indexForAppend = 0
                 let jsonDecoder = JSONDecoder()
                 let usersResponceModel = try jsonDecoder.decode(UsersResponce.self, from: usersResponceData.data ?? emptyData)

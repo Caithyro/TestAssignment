@@ -7,7 +7,7 @@ struct Location: Codable {
 	let city: String?
 	let state: String?
 	let country: String?
-	let postcode: Int?
+    let postcode: Postcode?
 	let coordinates: Coordinates?
 	let timezone: Timezone?
 
@@ -28,7 +28,7 @@ struct Location: Codable {
 		city = try values.decodeIfPresent(String.self, forKey: .city)
 		state = try values.decodeIfPresent(String.self, forKey: .state)
 		country = try values.decodeIfPresent(String.self, forKey: .country)
-		postcode = try values.decodeIfPresent(Int.self, forKey: .postcode)
+		postcode = try values.decodeIfPresent(Postcode.self, forKey: .postcode)
 		coordinates = try values.decodeIfPresent(Coordinates.self, forKey: .coordinates)
 		timezone = try values.decodeIfPresent(Timezone.self, forKey: .timezone)
 	}

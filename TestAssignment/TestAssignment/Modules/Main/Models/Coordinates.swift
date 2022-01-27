@@ -3,7 +3,7 @@ import Foundation
 
 struct Coordinates: Codable {
     
-    let latitude: String?
+	let latitude: String?
 	let longitude: String?
 
 	enum CodingKeys: String, CodingKey {
