@@ -26,6 +26,7 @@
 		663B850427A2F64500AD8D10 /* Results.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B84F727A2F64500AD8D10 /* Results.swift */; };
 		663B850627A2FE4A00AD8D10 /* Postcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B850527A2FE4A00AD8D10 /* Postcode.swift */; };
 		663B850827A3076600AD8D10 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663B850727A3076600AD8D10 /* DetailsViewController.swift */; };
+		666DA6B427A3ED2E0023A753 /* DetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 666DA6B327A3ED2E0023A753 /* DetailsViewModel.swift */; };
 		66726FCF27A295DB00690E61 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66726FCE27A295DB00690E61 /* AppDelegate.swift */; };
 		66726FD127A295DB00690E61 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66726FD027A295DB00690E61 /* SceneDelegate.swift */; };
 		66726FD327A295DB00690E61 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66726FD227A295DB00690E61 /* HomeViewController.swift */; };
@@ -59,6 +60,7 @@
 		663B84F727A2F64500AD8D10 /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		663B850527A2FE4A00AD8D10 /* Postcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Postcode.swift; sourceTree = "<group>"; };
 		663B850727A3076600AD8D10 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		666DA6B327A3ED2E0023A753 /* DetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewModel.swift; sourceTree = "<group>"; };
 		66726FCB27A295DB00690E61 /* TestAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		66726FCE27A295DB00690E61 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		66726FD027A295DB00690E61 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,21 @@
 				663B84E627A2EEFD00AD8D10 /* CustomTableViewCell.xib */,
 			);
 			path = CustomCell;
+			sourceTree = "<group>";
+		};
+		666DA6B127A3ED0F0023A753 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				666DA6B327A3ED2E0023A753 /* DetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		666DA6B227A3ED140023A753 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		66726FC227A295DB00690E61 = {
@@ -149,8 +166,8 @@
 		66726FE827A296D000690E61 /* Details */ = {
 			isa = PBXGroup;
 			children = (
-				66726FEE27A2971000690E61 /* Models */,
-				66726FED27A2970B00690E61 /* ViewModel */,
+				666DA6B227A3ED140023A753 /* Models */,
+				666DA6B127A3ED0F0023A753 /* ViewModel */,
 				66726FEC27A2970700690E61 /* View */,
 			);
 			path = Details;
@@ -199,20 +216,6 @@
 				663B850727A3076600AD8D10 /* DetailsViewController.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		66726FED27A2970B00690E61 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		66726FEE27A2971000690E61 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		66726FEF27A2971900690E61 /* Services */ = {
@@ -377,6 +380,7 @@
 				663B84FE27A2F64500AD8D10 /* Picture.swift in Sources */,
 				663B850327A2F64500AD8D10 /* Name.swift in Sources */,
 				663B850627A2FE4A00AD8D10 /* Postcode.swift in Sources */,
+				666DA6B427A3ED2E0023A753 /* DetailsViewModel.swift in Sources */,
 				663B84FC27A2F64500AD8D10 /* Login.swift in Sources */,
 				663B84EA27A2F06400AD8D10 /* MainViewModel.swift in Sources */,
 				663B84F927A2F64500AD8D10 /* Info.swift in Sources */,
@@ -538,6 +542,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5SL6Y86ZKW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -566,6 +571,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5SL6Y86ZKW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TestAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -16,7 +16,8 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var countryLabel: UILabel!
     
-    private let transformer = SDImageResizingTransformer(size: CGSize(width: 150, height: 150), scaleMode: .fill)
+    private let transformer = SDImageResizingTransformer(size: CGSize(width: 150, height: 150),
+                                                         scaleMode: .fill)
     
     override func awakeFromNib() {
         super.awakeFromNib()

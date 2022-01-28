@@ -21,7 +21,8 @@ enum Postcode: Codable {
             self = .string(x)
             return
         }
-        throw DecodingError.typeMismatch(Postcode.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Wrong type for Postcode"))
+        throw DecodingError.typeMismatch(Postcode.self, DecodingError.Context(codingPath: decoder.codingPath,
+                                                                              debugDescription: "Wrong type for Postcode"))
     }
 
     func encode(to encoder: Encoder) throws {

@@ -22,11 +22,12 @@ class HomeViewController: UIViewController {
     
     private func doStartupSetup() {
         
-        self.title = titleString
+        self.title = homeTitleString
         mainViewModel.getUserDataForPage(completionBlock: {
             self.usersTableView.reloadData()
         })
-        self.usersTableView.register(UINib(nibName: cellName, bundle: nil), forCellReuseIdentifier: cellName)
+        self.usersTableView.register(UINib(nibName: cellName, bundle: nil),
+                                     forCellReuseIdentifier: cellName)
     }
 }
 
@@ -39,7 +40,8 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let usersTableViewCell = usersTableView.dequeueReusableCell(withIdentifier: cellName, for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
+        guard let usersTableViewCell = usersTableView.dequeueReusableCell(withIdentifier: cellName,
+                                                                          for: indexPath) as? CustomTableViewCell else { return UITableViewCell() }
         
         let dataToDisplay = mainViewModel.usersData[indexPath.row]
         usersTableViewCell.setupCell(dataToDisplay: dataToDisplay)
@@ -49,7 +51,8 @@ extension HomeViewController: UITableViewDataSource {
 }
 extension HomeViewController: UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell,
+                   forRowAt indexPath: IndexPath) {
         
         if indexPath.row == (mainViewModel.usersData.count - 1) {
             mainViewModel.page += 1
@@ -66,6 +69,8 @@ extension HomeViewController: UITableViewDelegate {
                                                                         detailsViewControllerName)
             as? DetailsViewController {
             navigationController?.pushViewController(detailsViewController, animated: true)
+            detailsViewController.detailsViewModel.dataToDisplay = mainViewModel.usersData
+            detailsViewController.detailsViewModel.indexPath = indexPath.row
         }
     }
 }
