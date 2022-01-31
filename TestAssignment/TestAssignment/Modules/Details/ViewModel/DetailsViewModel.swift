@@ -57,26 +57,20 @@ class DetailsViewModel {
         
         if with == callMethodCellString {
             let cellphoneNumber = dataToDisplay[indexPath].cell ?? ""
-            if let cellphoneUrl = URL(string: "tel://\(cellphoneNumber)"),
-               UIApplication.shared.canOpenURL(cellphoneUrl) {
+            let cellphoneUrl = URL(string: "tel://\(cellphoneNumber)")
                   if #available(iOS 10, *) {
-                    UIApplication.shared.open(cellphoneUrl, options: [:], completionHandler:nil)
+                    UIApplication.shared.open(cellphoneUrl!, options: [:], completionHandler:nil)
                    } else {
-                       UIApplication.shared.openURL(cellphoneUrl)
+                       UIApplication.shared.openURL(cellphoneUrl!)
                    }
-               } else {
-               }
         } else {
             let phoneNumber = dataToDisplay[indexPath].phone ?? ""
-            if let phoneUrl = URL(string: "tel://\(phoneNumber)"),
-               UIApplication.shared.canOpenURL(phoneUrl) {
+            let phoneUrl = URL(string: "tel://\(phoneNumber)")
                   if #available(iOS 10, *) {
-                    UIApplication.shared.open(phoneUrl, options: [:], completionHandler:nil)
+                      UIApplication.shared.open(phoneUrl!, options: [:], completionHandler:nil)
                    } else {
-                       UIApplication.shared.openURL(phoneUrl)
+                       UIApplication.shared.openURL(phoneUrl!)
                    }
-               } else {
-               }
         }
     }
 }
